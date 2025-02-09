@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+:root {
+  --f-style: "Zen Antique", serif;
+  --blue: #0022D2;
+  --default: #333333;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--default);
+  background-color: #ebebeb;
+}
+
+.pc {display: block;}
+.sp {display: none;}
+.sp-inline {display: none;}
+@media (max-width: 768px) {
+  .pc {display: none;}
+  .sp {display: block;}
+  .sp-inline {display: inline;}
+}
+
+/* topページ */
+
+/* top-header */
+#top-header {
+  padding: 3.6vw;
+  background-image: url(assets/image/KV_frame.png);
+  background-size: contain;
+  max-width: 1480px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 7.2vw;
+  border-left: solid 1px #8E8E8E;
+  border-right: solid 1px #8E8E8E;
+  background-color: #ffffff;
+}
+#top-header .header_inside img {
+  width: 100%;
+}
+.page-top-nav {
+  font-family: var(--f-style);
+  font-size: 20px;
+  color: var(--blue);
+  line-height: 1em;
+  letter-spacing: .1em;
+  display: flex;
+  align-items: center;
+  }
+.page-top-nav ul li:not(:last-child) {
+    margin-bottom: .4em;
+}
+@media (max-width: 1280px) {.page-top-nav {font-size: 16px;}}
+@media (max-width: 1024px) {.page-top-nav {font-size: 12px;}}
+@media (max-width: 768px) {
+  #top-header {
+    background-image: url(assets/image/KV_frame_sp.png);
+    grid-template-columns: 1fr 1fr 1fr;
+    border-left: none;
+    border-right: none;
+  }
+  .page-top-nav {font-size: 12px;}
+}
+
+main {
+  border-top: solid 1px #8E8E8E;
+  background-color: #ffffff;
+}
+
+
+
+
+
+
+/* html {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.zen-antique-regular {
+  font-family: "Zen Antique", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
